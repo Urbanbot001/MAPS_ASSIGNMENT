@@ -1,0 +1,30 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  height: 100vh;
+}
+
+.quote-details-container {
+  display: flex;
+  height: 100vh;
+}
+
+.submenu-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 8px 0;
+}
+
+.submenu-link:hover {
+  background-color: #eef2f7;
+  border-radius: 5px;
+}

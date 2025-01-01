@@ -1,0 +1,650 @@
+/* Sidebar */
+.sidebar {
+  border-right: 1px solid #e0e0e0;
+  width: 250px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  top: 0; /* Align with the top of the viewport */
+  left: 0;
+  height: 200%;
+  box-sizing: border-box;
+}
+
+.sidebar > * {
+  margin-top: 0; /* Ensure no unexpected top margin overflow */
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  text-align: left; /* Ensure text aligns properly */
+  margin-bottom: 20px;
+  gap: 10px; /* Add space between the image and text */
+}
+
+.logo img {
+  height: 25px; /* Adjust the size as needed */
+  width: auto; /* Maintain aspect ratio */
+  cursor: pointer;
+}
+
+.logo p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4; /* Adjust spacing between lines */
+}
+
+.logo p span {
+  display: block; /* Forces "Platform" onto a new line */
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: #eef2f7;
+  border-radius: 5px;
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-size: cover;
+}
+
+.dashboard-icon {
+  background-image: url('grid-2.png');
+}
+
+.inventory-icon {
+  background-image: url('box.png');
+}
+
+.procurement-icon {
+  background-image: url('cart.png');
+}
+
+.finance-icon {
+  background-image: url('money-1.png');
+}
+
+.communication-icon {
+  background-image: url('chats.png');
+}
+
+.calendar-icon {
+  background-image: url('calendar-alt.png');
+}
+
+.contracts-icon {
+  background-image: url('sign-doc.png');
+}
+
+.support-icon {
+  background-image: url('question-circle.png');
+}
+
+.settings-icon {
+  background-image: url('settings.png');
+}
+
+/* Submenu */
+.submenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px; /* Indent submenu items */
+  display: none; /* Hidden by default */
+}
+
+.submenu-list.show {
+  display: block; /* Make submenu visible when the show class is added */
+}
+
+/* Ensure the submenu opens below */
+.submenu-list li {
+  padding: 8px 0;
+  color: #333;
+  cursor: pointer;
+}
+
+.submenu-list li:hover {
+  background-color: #eef2f7;
+  border-radius: 5px;
+}
+
+/* Align submenu with parent */
+.submenu {
+  position: relative;
+}
+
+.submenu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+
+.chevron-down {
+  background-image: url('Icons.png');
+}
+
+.chevron-up {
+  background-image: url('Icons1.png');
+}
+
+
+
+.badge {
+  background-color: #007bff;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+.bottom-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  margin-top: 20rem;
+}
+
+.bottom-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.bottom-menu li:hover {
+  background-color: #eef2f7;
+  border-radius: 5px;
+}
+
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.email-section {
+  display: flex;
+  align-items: center; /* Align text and image vertically */
+  gap: 10px; /* Add space between the email text and the image */
+}
+
+.email-section img {
+  height: 20px; /* Adjust the image size as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-bar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 250px; /* Adjust the container width as needed */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Adjust spacing to align the icon */
+  color: #a0a0a0; /* Icon color */
+  pointer-events: none; /* Prevent interaction with the icon */
+}
+
+.search-bar {
+  flex: 1;
+  padding: 5px 10px 5px 30px; /* Add padding-left to make space for the icon */
+  margin-left: 5px; /* Shift the search bar to the right */
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+  margin-right: 2rem;
+}
+
+.header-icons span {
+  width: 20px;
+  height: 20px;
+}
+
+.user-avatar-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-avatar {
+  width: 20px; /* Adjust the size */
+  height: 20px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+}
+
+.dropdown-icon {
+  margin-left: 8px; /* Spacing between the image and icon */
+  cursor: pointer; /* Make it clickable */
+}
+
+.megamenu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+
+
+.user-avatar-container:hover .megamenu {
+  display: block; /* Show megamenu on hover */
+}
+
+.megamenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.megamenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.megamenu li:hover {
+  background: #f0f0f0; /* Highlight on hover */
+}
+
+/* Quote Information Section */
+.quote-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.quote-info-header h1 {
+  font-size: 18px;
+  color: #333;
+}
+
+.quote-info-header p {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.respond-button,
+.reject-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.respond-button {
+  background-color: #0056d2;
+}
+
+.reject-button {
+  background-color: #e63946;
+}
+
+/* Quote Information */
+.quote-information-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.quote-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.delivery-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.quote-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-details {
+  flex: 2;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.detail-content {
+  margin-right: 12rem; /* Adjust negative margin to bring it closer to the span */
+  margin:0;
+}
+
+.detail-titlef {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+  margin-right: 10rem;
+}
+
+.detail-titles {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+  margin-right: 8.5rem;
+}
+
+.detail-titlet {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+  margin-right: 7.5rem;
+}
+
+.detail-titlefourth {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+  margin-right: 9rem;
+}
+
+.detail-titlefifth {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+  margin-right: 7rem;
+}
+
+.requestor-name {
+  display: flex;
+  align-items: center; /* Keep the arrow and text vertically aligned */
+  gap: 5px; /* Add space between elements */
+  margin: 0; /* Remove default margin */
+}
+
+.iconJane {
+  cursor: pointer;
+  font-size: 1rem; /* Adjust icon size */
+}
+
+.requestor-role {
+  margin-left: 10px; /* Space between the icon and role */
+  color: gray; /* Optional: Add color for distinction */
+}
+.requestor-info,
+.client-info {
+  display: flex;
+  align-items: center;
+}
+
+.requestor-avatar,
+.client-avatar {
+  width: 35px;
+  height: 35px;
+  background-color: #ffc2b3;
+  color: #555;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.requestor-name,
+.client-name {
+  font-weight: bold;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ffc2b3;
+  color: #d9534f;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.client-details {
+  flex: 1;
+}
+
+.client-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.client-title {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+
+
+/* Items Section */
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.items-table th {
+  text-align: left;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.items-table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.items-table input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.item-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.item-details {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item-name {
+  display: block;
+  font-weight: bold;
+}
+
+.item-id {
+  display: block;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.total-wrapper {
+  font-weight: bold;
+  display: block;
+  margin-left: 41.5rem;
+}
+
+.sub-total {
+  margin-bottom: 10px;
+}
+
+.total-amount {
+  color: #007bff;
+}
+
+
+/* Terms Section */
+.terms-and-attachments {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: bold;
+  display: block;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+.toggle-icon {
+  margin-left: 10px;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}

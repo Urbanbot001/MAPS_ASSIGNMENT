@@ -1,0 +1,232 @@
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 95%; /* Set the maximum width */
+  margin:auto;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.5;
+}
+
+.progress-step.active {
+  opacity: 1;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.step-description {
+  font-size: 12px;
+  color: #666;
+}
+
+.quote-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 95%; /* Set the maximum width */
+  margin:auto;
+  margin-top: 3rem;
+}
+
+.request-info h2,
+.add-items h2 {
+  margin-bottom: 10px;
+  margin-top: 2rem;
+}
+
+.request-info p {
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 5px; /* Add spacing between elements */
+}
+
+.calculated {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px; /* Add spacing between input and span */
+}
+
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.items-table th,
+.items-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.total-section {
+  text-align: right;
+  font-weight: bold;
+}
+
+.note-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align children to the left */
+  position: relative;
+}
+
+.note-label {
+  margin-bottom: 5px; /* Add spacing between label and textarea */
+  font-size: 14px;
+  color: #333; /* Optional: Adjust the label style */
+}
+
+.note-section textarea {
+  width: 50%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px; /* Optional: Adjust text size inside the textarea */
+  resize: none; /* Prevent resizing of the textarea */
+  overflow: auto; /* Add scrollbars if content exceeds height */
+}
+
+.note-section span {
+  position: absolute;
+  right: calc(50% - 10px); /* Align with the right edge of the textarea */
+  bottom: -20px; /* Adjust spacing from the bottom of the textarea */
+  font-size: 12px;
+  color: #666; /* Optional: Adjust text color */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 3rem;
+  padding-top: 3rem; /* Add padding above the buttons for spacing */
+  border-top: 1px solid #e0e0e0; /* Add a border line above */
+}
+
+.cancel-btn,
+.save-draft-btn,
+.continue-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ddd;
+}
+
+.save-draft-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.continue-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+
+.actions-oxygen {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Add space between the buttons */
+}
+
+.actionsprice-oxygen {
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  gap: 10px; /* Add space between the values */
+}
+
+.actionsprice-oxygen span {
+  font-size: 14px; /* Adjust the font size if needed */
+  color: #333; /* Set a consistent text color */
+}
+
+.delete-actions {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Add space between the buttons */
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff0000; /* Red color for the trash icon */
+  cursor: pointer;
+  font-size: 16px; /* Adjust the icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-btn i {
+  pointer-events: none; /* Prevent clicks on the icon itself */
+}
+
